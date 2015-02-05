@@ -1,0 +1,56 @@
+\documentclass[a4paper, 12pt]{article}
+% ----- Loading the Package MCMthesis -----
+% -----           v 5.01-L            -----
+% `tcn' is short for `Team Control Number'.
+% You should fill your tcn after the equal sign following tcn.
+% The option `sheet' contorls weather the summary sheet
+% will appear.
+% The option `abstract' controls weather the abstract 
+% will appear in the title-page.
+\usepackage[tcn = 37862, sheet = true, abstract = false]{MCMthesis}
+% ----- Question Mark -----
+\problem{A}
+% ----- Fonts settings -----
+% You may need to install the font files, if it's needed.
+% Disable it, if you don't want this font.
+\usepackage{palatino}
+% ----- Set the skip betweent the paragraphics -----
+\setlength\parskip{.5\baselineskip}
+% ----- The name of Abstract ------
+\providecommand{\abstractname}{\relax} % <-- Do not modify here.
+\renewcommand{\abstractname}{Executive Summary} % <-- Modify here, if needed
+
+% -----------------------------------
+% ===== The Title of Your Paper =====
+% -----------------------------------
+\title{The \LaTeX Template for  MCM Version 5.0}
+% ---------------------------------------
+% ===== The Author(s) of Your Paper =====
+% ---------------------------------------
+\author{Team $\#\ 37862$}
+% ----------------
+% ===== Time =====
+% ----------------
+\date{\today}
+\begin{document}
+% Abstract should be put before `\maketitle'
+\begin{abstract}
+We determine the sweet spot on a baseball bat. We capture the essential
+physics of the ball-bat impact by taking the ball to be a lossy spring and the
+bat to be an Euler-Bernoulli beam. To impart some intuition about the model,
+we begin by presenting a rigid-body model. Next, we use our full model
+to reconcile various correct and incorrect claims about the sweet spot found
+in the literature. Finally, we discuss the sweet spot and the performances of
+corked and aluminum bats, with a particular emphasis on hoop modes.
+
+\end{abstract}
+
+\maketitle
+\pagestyle{empty}
+\newpage
+
+% The body of your paper
+\input{body.tex}
+\input{append.tex}
+\end{document}
+% ----- End of Document Body -----
