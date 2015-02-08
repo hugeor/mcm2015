@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 11pt]{article}
 % ----- Loading the Package MCMthesis -----
 % -----           v 5.01-L            -----
 % `tcn' is short for `Team Control Number'.
@@ -14,6 +14,9 @@
 % You may need to install the font files, if it's needed.
 % Disable it, if you don't want this font.
 \usepackage{palatino}
+%------------------Personal Adjustment---------------------
+\usepackage{setspace}
+
 % ----- Set the skip betweent the paragraphics -----
 \setlength\parskip{.5\baselineskip}
 % ----- The name of Abstract ------
@@ -23,7 +26,7 @@
 % -----------------------------------
 % ===== The Title of Your Paper =====
 % -----------------------------------
-\title{The \LaTeX Template for  MCM Version 5.0}
+\title{Transmission dynamics and control of Ebola virus disease (EVD)}
 % ---------------------------------------
 % ===== The Author(s) of Your Paper =====
 % ---------------------------------------
@@ -33,6 +36,7 @@
 % ----------------
 \date{\today}
 \begin{document}
+\begin{spacing}{1.2}
 % Abstract should be put before `\maketitle'
 \begin{abstract}
 We determine the sweet spot on a baseball bat. We capture the essential
@@ -48,9 +52,21 @@ corked and aluminum bats, with a particular emphasis on hoop modes.
 \maketitle
 \pagestyle{empty}
 \newpage
+% Generate the Table of Contents, if it's needed.
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\pagestyle{fancy}
+%\setcounter{page}{1}
 
 % The body of your paper
 \input{body.tex}
+\medskip
+ 
+\bibliographystyle{ieeetr}
+\bibliography{ebola}
 \input{append.tex}
+\end{spacing}
 \end{document}
 % ----- End of Document Body -----
